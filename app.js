@@ -6,9 +6,7 @@ let h;
 let Score = 0;
 
 function setup() {
-  mic = new p5.AudioIn();
-  mic.start();
-  getAudioContext().resume();
+
   createCanvas(600, 600);
   w = floor(width / scl);
   h = floor(height / scl);
