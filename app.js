@@ -47,7 +47,7 @@ function draw() {
     background(255,0,0);
     fill(255)
     textSize(5)
-    text("END GAME!", 5, 20)
+    text("Game END!", 5, 20)
     noLoop();
   }
 
