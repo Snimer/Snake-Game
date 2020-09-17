@@ -6,8 +6,7 @@ let h;
 let Score = 0;
 
 function setup() {
-
-  createCanvas(600, 600);
+  createCanvas(400, 400);
   w = floor(width / scl);
   h = floor(height / scl);
   frameRate(10)
@@ -40,16 +39,21 @@ function keyPressed() {
 function draw() {
   scale(scl);
   background(0);
+  fill(255)
+  textSize(1.8)
+  text('Score : ' + Score, 0.5, 2)
+
   if(snake.endGame()){
-    print("END GAME");
     background(255,0,0);
+    fill(255)
+    textSize(5)
+    text("END GAME!", 5, 20)
     noLoop();
-    let resetButton = createButton('Play Again');
   }
+
   if(snake.eat(dadu)){
     daduLocation();
     Score += 1;
-    console.log('SCORE : ' + Score);
   }
 
   snake.update();
